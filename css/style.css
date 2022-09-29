@@ -35,7 +35,7 @@
     --border-radius-rounded: 50%;
 }
 
-/* genereal, ska gälla oavsett var på sidan objektet är */
+/* general */
 html, body {
     font-size: 16px;
     line-height: 1.5;
@@ -49,6 +49,7 @@ html, body {
     color: var(--color-white);
     border-radius: var(--border-radius-medium);
     font-weight: var(--font-weight-medium);
+    font-size: 1.125rem;
     padding-left: 1.75rem;
     padding-right: 1.75rem;
 }
@@ -62,10 +63,23 @@ html, body {
     color: var(--color-theme);
     border-radius: var(--border-radius-medium);
     font-weight: var(--font-weight-medium);
+    border: none;
 }
     .btn-white:hover {
         background-color: var(--color-theme-dark);
         color: var(--color-white);
+    }
+
+.btn-dark {
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+}
+    .btn-dark:hover {
+        background-color: var(--color-white);
+        color: var(--color-theme);
+        border: none;
     }
 
 .bg-theme {
@@ -91,11 +105,11 @@ html, body {
     text-align: center;
     margin: 3rem 0;
     }
-
     .section-title h1 {
         font-family: var(--font-play);
         font-weight: var(--font-weight-bold);
         font-size: var(--font-size-36);
+        margin: 1.5rem;
     }
         .section-title h1 span {
             color: var(--color-theme);
@@ -110,10 +124,10 @@ color: var(--color-theme);
 font-weight: var(--font-weight-regular);
 text-decoration: none;
 }
-a:hover {
-    color: var(--color-theme-dark);
-    text-decoration: underline;
-}
+    a:hover {
+        color: var(--color-theme-dark);
+        text-decoration: underline;
+    }
 
 .form-theme .card {
     padding: 1.5rem;
@@ -141,30 +155,39 @@ a:hover {
     width: 20px;
     display: inline-block;
 }
-.form-theme form input[type=text],
-.form-theme form input[type=email], 
-.form-theme form input[type=password] {
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 6px;
-    padding: 0.6rem 0.9rem;
-    margin: 0.2rem 0;
-}
-    .form-theme form input:focus {
-        outline: 0;
-        box-shadow: 0 0 3px 0 var(--color-gray-0);
+    .form-theme form input[type=text],
+    .form-theme form input[type=email], 
+    .form-theme form input[type=password] {
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        padding: 0.6rem 0.9rem;
+        margin: 0.2rem 0;
     }
+        .form-theme form input:focus {
+            outline: 0;
+            box-shadow: 0 0 3px 0 var(--color-gray-0);
+        }
 
-
+.page-bottom {
+    background-color: var(--color-theme-dark);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+    .page-bottom p {
+        color: var(--color-white);
+        padding-top: 10px;
+    }
 
 /* top-menu */
 .top-menu {
     background-color: var(--color-theme);
     color: var(--color-white);
     height: 40px;
-    
 }
+
     .top-menu > .container {
         height: 100%;
         display: flex;
@@ -175,7 +198,7 @@ a:hover {
     .top-menu .site-settings {
         display: flex;
     }        
-    
+
         .top-menu .site-settings .dropdown-theme {        
         background-color: var(--color-theme);     
         color: var(--color-white);         
@@ -213,18 +236,17 @@ a:hover {
     .top-menu .menu-links {
         display: none;
     }
-    .top-menu .menu-links .links {
-        display: none;
-    }
-
-    .top-menu .menu-links a {
-        color: var(--color-white);
-        text-decoration: none;
-        margin: 1.2rem;
-    }
-        .top-menu .menu-links a:hover{
-            color: var(--color-theme-dark);
+        .top-menu .menu-links .links {
+            display: none;
         }
+        .top-menu .menu-links a {
+            color: var(--color-white);
+            text-decoration: none;
+            margin: 1.2rem;
+        }
+            .top-menu .menu-links a:hover{
+                color: var(--color-theme-dark);
+            }
         .top-menu .menu-links .social-media {
             margin-left: 1rem;
             font-size: var(--font-size-14);
@@ -301,15 +323,17 @@ a:hover {
             color: var(--color-theme-dark);
             margin: 0 0.8rem;
         }
-        .main-menu .menu-links .menu-link:hover {
-            color: var(--color-theme);
-        }
+            .main-menu .menu-links .menu-link:hover {
+                color: var(--color-theme);
+            }
+
         .main-menu .menu-links .menu-link:first-child {
             margin: 0 2.4rem 0 0;
         }
             .main-menu .menu-links .menu-link:last-child {
                 margin: 0 0 0 0.8rem;
             }
+
         .main-menu .menu-links .menu-link i {
             font-size: var(--font-size-16);
         }
@@ -330,7 +354,6 @@ a:hover {
     .main-menu nav {
         border-top: 1px solid var(--color-gray-3);
         border-bottom: 1px solid var(--color-gray-3);
-     
     }
         .main-menu > nav > .container {
             display: flex;
@@ -339,7 +362,6 @@ a:hover {
         }
         .main-menu nav .browse-categories {
             flex: 2;
-
         }
             .main-menu nav .browse-categories button {
                 background-color: var(--color-theme);
@@ -352,7 +374,6 @@ a:hover {
                 align-items: center;
                 padding: 0.7rem 1rem;
                 transition: 0.15s ease-in-out;
-
             }
                 .main-menu nav .browse-categories button:hover{
                     background-color: var(--color-theme-dark);
@@ -362,20 +383,20 @@ a:hover {
                     display: flex;
                     align-items: center;
                 }
-                .main-menu nav .browse-categories button > span > i {
-                    font-size: 1.4em;
-                }
+                    .main-menu nav .browse-categories button > span > i {
+                        font-size: 1.4em;
+                    }
 
         .main-menu nav .special-offer {
             flex: 7;
             display: flex;
             justify-content: end;
             align-items: center;
-
         }
 
 
 /* showcase */
+
 .showcase {
     background-color: var(--color-gray-3);
 }
@@ -384,7 +405,6 @@ a:hover {
         padding-top: 2.4rem;
         padding-bottom: 2.4rem;
     }
-
 
     .showcase .showcase-body h1 {
         font-size: 3.5rem;
@@ -405,6 +425,7 @@ a:hover {
 
 
 /* webshop-info */
+
 .webshop-info {
     padding: 4rem 0;
 }
@@ -488,7 +509,7 @@ a:hover {
                 font-size: 0.8rem;
                 margin-top: 0.5rem;
                 }  
-            
+
 
     #category-box-1 {
         grid-column: 1 / 2;
@@ -523,6 +544,7 @@ a:hover {
 
 .new-arrivals {
     padding-top: 6rem;
+    padding-bottom: 10.5rem;
 }
 
     .new-arrivals .card {
@@ -531,7 +553,6 @@ a:hover {
         width: 320px;
         overflow: hidden;
     }
-
         .new-arrivals .card img {
             height: 400px;
         }
@@ -545,10 +566,12 @@ a:hover {
             z-index: 1;
             transition: 0.3s ease-in-out;
             font-size: 1rem;
+            margin: 0.2rem;
         }
             .new-arrivals .card:hover .card-body {
                 height: 40%;
             }
+
             .new-arrivals .card .card-body h1 {
                 font-size: 1.125rem;
                 margin-bottom: 1rem;
@@ -557,8 +580,8 @@ a:hover {
             }
                 .new-arrivals .card:hover .card-body h1 {
                     margin-bottom: 0;
-                    
                 }
+
             .new-arrivals .card .card-body button {
                 background-color: transparent;
                 color: var(--color-white);
@@ -616,13 +639,252 @@ a:hover {
                     margin-bottom: 0.3rem;
                     font-size: 1.0em;
                 }
-
                     .new-arrivals .card .card-menu li a {
                         color: var(--color-gray-0);
                     }
                         .new-arrivals .card .card-menu li a:hover {
                             color: var(--color-theme);
                         }
+
+/* page break 1 */
+
+/* Visste inte vad dessa sektioner skulle heta men de är "breaksen" på sidan iaf så jag satte dem tillsammans*/
+
+.page-break-1 {
+    background-color: var(--color-gray-1);
+}
+    .page-break-1 .container {
+        height: 420px;
+    }
+        .page-break-1 .percentage-off {
+            background-color: var(--color-theme);
+            color: var(--color-white);
+            width: 255px;
+            height: 420px;
+            text-align: center;
+            padding-top: 6rem;
+        }
+            .page-break-1 .percentage-off h1 {
+                font-size: 3.5rem;
+                font-family: var(--font-play);
+                font-weight: var(--font-weight-bold);
+                padding: 0.5rem;
+            
+            }
+                .page-break-1 .percentage-off h1 strong {
+                    font-size: 2.1rem;
+                    font-weight: var(--font-weight-bold);
+                    
+                }
+            .page-break-1 .percentage-off p {
+                margin-bottom: 1.5rem;
+            }
+
+        .page-break-1 .learn-more-text {
+            color: var(--color-white);
+            width: 445px;
+            height: 97px;
+            font-size: 0.875rem;
+            line-height: 1.8rem;
+            padding-bottom: 12rem;
+           
+        }
+
+/* page break 2 */
+
+/* Det skulle kunna vara så att det är lättare att flytta runt nedräkningen och 
+knappen med grid-funktionen istället för att hålla på med en massa margins men nu blev det såhär heh
+Tror säkert det finns ett bättre sätt att sätta dit bordern runt cirklarna men det här var mest
+straight-forward så jag gjorde så. */
+
+.page-break-2 {
+    background-color: #292F51;
+}
+    .page-break-2 .container {
+        height: 420px;
+        display: flex;
+    }
+        .page-break-2 .flash-sale {
+            background-color: var(--color-theme);
+            color: var(--color-white);
+            width: 255px;
+            height: 265px;
+            text-align: center;
+            padding-top: 2rem;
+        
+        }
+            .page-break-2 .flash-sale h1 {
+             font-family: var(--font-play);
+             font-weight: bold;
+             font-size: 3.75rem;
+            }
+                .page-break-2 .flash-sale p {
+                    font-size: 1.5rem;
+                    font-weight: var(--font-weight-medium);
+                }
+
+    .page-break-2 .container .countdown {
+        width: 955px;
+        display: flex;
+        justify-content: end;
+        padding-right: 2rem;
+    }
+        .page-break-2 .container .countdown .flash-button {
+            position: absolute;
+            margin-right: 12rem;
+            margin-top: 16.25rem;
+        }
+        .page-break-2 .container .countdown .countdown-circle {
+            background-color: var(--color-white);
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin-left: 1.875rem;
+            margin-top: 7.625rem;
+        }
+            .page-break-2 .container .countdown .countdown-circle h1 {
+               color: var(--color-theme);
+               font-family: var(--font-play);
+               font-weight: var(--font-weight-bold);
+               font-size: 2.25rem;
+               display: flex;
+               justify-content: center;
+               position: relative;
+               margin-top: 1.5rem;
+               margin-bottom: 0;
+            }
+            .page-break-2 .container .countdown .countdown-circle p {
+                display: flex;
+                justify-content: center;
+                margin-top: -3px;
+            }
+
+            .page-break-2 .container .countdown .outline {
+                border: 2.5px var(--color-theme);
+                border-style: dashed;
+                width: 116px;
+                height: 116px;
+                border-radius: 50%;
+                position: absolute;
+                display: flex;
+                margin-top: -3px;
+                margin-left: -2.5px;
+            }
+
+/* page break 3 */
+
+.page-break-3 {
+background-color: var(--color-gray-4);
+}
+    .page-break-3 .container {
+        display: flex;
+        height: 315px;
+        width: 100%;
+    }
+        .page-break-3 .subscribe-now {
+            width: 660px;
+            padding-top: 4rem;
+        }
+            .page-break-3 .subscribe-now h1 {
+                font-size: 2.25rem;
+                font-family: var(--font-play);
+                font-weight: var(--font-weight-bold);
+                padding-bottom: 0.7rem;
+            }
+                .page-break-3 .subscribe-now h1 strong {
+                    color: var(--color-theme);
+                }
+            .page-break-3 .subscribe-now p {
+                width: 400px;
+                padding-bottom: 0.7rem;
+            }
+
+    .page-break-3 .subscribe-box {
+        background-color: var(--color-gray-1);
+        width: 670px;    
+    }
+    .page-break-3 .search #searchboxForm {
+        border-radius: var(--border-radius-medium);
+        height: 45px;
+        margin: auto;
+        position: relative;
+    }
+        .page-break-3 .search #searchboxForm input {
+            position: absolute;
+            border-radius: var(--border-radius-medium);
+            height: 100%;
+            width: 450px;
+            outline: none;
+            border: 1px solid var(--color-gray-2);
+            font-size: 0.9rem;
+            padding-left: 1.3rem;
+        }
+        .page-break-3 .search #searchboxForm button {
+            position: absolute;
+            top: 0;
+            left: 345px;
+            width: 105px;
+            height: 100%;
+            background-color: var(--color-theme);
+            color: var(--color-white);
+            border: none;
+            border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
+            transition: 0.3s ease-in-out;
+        }
+            .page-break-3 .search #searchboxForm button:hover {
+                    background-color: var(--color-theme-dark);
+                }
+
+/* Top sellers  */
+
+/* eftersom att det var flera klasser ur new-arrivals-sektionen som kunde användas  
+i denna så gjorde jag det, trots att sektionen borde heta top-sellers. Jag försökte 
+börja helt från början med en ny top-sellers-sektion för att få allt konsekvent, men då
+strulade en massa saker till sig så det blev såhär i slutändan. */
+
+    .new-arrivals .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px));
+        grid-template-rows: repeat(2, minmax(100px, 400px));
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        }
+            .new-arrivals .grid .card {
+                width: 100%;
+                background-color: var(--color-gray-3);
+                }
+                .new-arrivals .grid .card img {
+                    height: auto;
+                    }
+
+#box-1 { grid-area: 1 / 1 / 3 / 2; }
+#box-2 { grid-area: 1 / 2 / 2 / 3; }
+#box-3 { grid-area: 2 / 2 / 3 / 3; }
+
+#box-1 .card .card-background {
+    position: absolute;
+    bottom: 0;
+    height: 7.4%;
+    width: 100%;
+    background-color: var(--color-theme-dark);
+    opacity: 0.90;
+    transition: height 0.3s ease-in-out;
+}
+    #box-1 .card:hover .card-background {
+        height: 100%;
+    }
+
+    #box-1 .card-body h1 {
+        margin-top: 3.6rem;
+        
+    }
+        #box-1:hover .card-body h1 {
+            margin-top: 10rem;
+            
+        }
+        #box-1:hover .card-menu {
+            margin-top: 1rem;
+        }
 
 
 /* Header */
@@ -632,7 +894,6 @@ a:hover {
     color: var(--color-white);
     padding-top: 3rem;
     padding-bottom: 3rem;
-
 }
 
 .site-title .container {
@@ -711,13 +972,11 @@ a:hover {
             opacity: 0.5;
         }
 
-
 .external-socialmedia-buttons {
     display: grid;
     grid-template-columns:  1fr 1fr;
     column-gap: 2rem;
 }
-
     .external-socialmedia-buttons .facebook-button {
         text-align: left;
     }
@@ -747,13 +1006,12 @@ a:hover {
             }
     
 
+/* media query */
 
-
-
-
-/* mobiloptimering, allt över anvisade pixlar agerar på ett visst sätt dvs responsiv design */
+/* Jag hade asbolut kunnat vara mer ambitiös med responsiviteten men hann helt enkelt inte med det. */
 
 @media (min-width:578px) {
+    
     .top-menu .menu-links {
         display: block;
     }
@@ -763,6 +1021,7 @@ a:hover {
 }
 
 @media (min-width:768px) {
+
     .showcase .showcase-body h1 {
         font-size: var(--font-size-60);
     }    
@@ -773,6 +1032,7 @@ a:hover {
 }
 
 @media (min-width:992px) {
+
     .top-menu .menu-links .links {
         display: inline;
     }
@@ -790,8 +1050,17 @@ a:hover {
         width: 50%;
     }
 
+    .page-break-1 .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align:  left;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 
 }
+
 @media (min-width: 1200px) {
 
     .showcase .showcase-body{
@@ -804,7 +1073,6 @@ a:hover {
         flex: 1;
         width: 100%;
     }
-
 
 }
 
